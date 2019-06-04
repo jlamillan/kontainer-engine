@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/rancher/kontainer-engine/drivers/oke"
 	"os"
 	"os/exec"
 	"os/user"
@@ -33,6 +34,7 @@ var (
 		GoogleKubernetesEngineDriverName:        gke.NewDriver(),
 		AzureKubernetesServiceDriverName:        aks.NewDriver(),
 		AmazonElasticContainerServiceDriverName: eks.NewDriver(),
+		OracleKubernetesEngineDriverName:        oke.NewDriver(),
 		ImportDriverName:                        kubeimport.NewDriver(),
 		RancherKubernetesEngineDriverName:       rke.NewDriver(),
 	}
@@ -42,6 +44,7 @@ const (
 	ListenAddress                           = "127.0.0.1:"
 	GoogleKubernetesEngineDriverName        = "googlekubernetesengine"
 	AzureKubernetesServiceDriverName        = "azurekubernetesservice"
+	OracleKubernetesEngineDriverName        = "oraclekubernetesengine"
 	AmazonElasticContainerServiceDriverName = "amazonelasticcontainerservice"
 	ImportDriverName                        = "import"
 	RancherKubernetesEngineDriverName       = "rancherkubernetesengine"
