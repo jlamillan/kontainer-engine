@@ -5,6 +5,7 @@ import (
 	"github.com/rancher/kontainer-engine/drivers/eks"
 	"github.com/rancher/kontainer-engine/drivers/gke"
 	"github.com/rancher/kontainer-engine/drivers/import"
+	"github.com/rancher/kontainer-engine/drivers/oke"
 	"github.com/rancher/kontainer-engine/drivers/rke"
 	"github.com/rancher/kontainer-engine/types"
 )
@@ -16,6 +17,7 @@ func init() {
 		"googlekubernetesengine":        gke.NewDriver(),
 		"azurekubernetesservice":        aks.NewDriver(),
 		"amazonelasticcontainerservice": eks.NewDriver(),
+		"oraclekubernetesengine":        oke.NewDriver(),
 		"import":                        kubeimport.NewDriver(),
 		"rke":                           rke.NewDriver(),
 	}
